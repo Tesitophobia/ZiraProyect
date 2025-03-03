@@ -1,0 +1,189 @@
+---
+import PrincipalButton from '../components/PrincipalButton.astro';
+---
+<section class="PrincipalText">
+    <h1>Informatica Diseño & Desarrollo de Software</h1>
+    </section>
+
+<!-- <section class="sc1">
+    <img class="img imguno moveable" src="src/assets/Vector 5.svg" alt="" id="imguno">
+    <img class="img imgdos moveable" src="src/assets/Vector 5.svg" alt="" id="imgdos">
+    <img class="img imgtres moveable" src="src/assets/Vector 5.svg" alt="" id="imgtres">
+    <img class="img imgcuatro moveable" src="src/assets/Vector 5.svg" alt="" id="imgcuatro">
+    <img class="img imgcinco moveable" src="src/assets/Vector 5.svg" alt="" id="imgcinco">
+    <img class="img imgseis moveable" src="src/assets/Vector 5.svg" alt="" id="imgseis">
+    <img class="img imgsiete moveable" src="src/assets/Vector 5.svg" alt="" id="imgsiete">
+    <img class="img imgocho moveable" src="src/assets/Vector 5.svg" alt="" id="imgocho">
+    <img class="img imgnueve moveable" src="src/assets/Vector 5.svg" alt="" id="imgnueve">
+    <img class="img imgdiez moveable" src="src/assets/Vector 5.svg" alt="" id="imgdiez">
+    <img class="img imgonce moveable" src="src/assets/Vector 5.svg" alt="" id="imgonce">
+    <img class="img imgdoce moveable" src="src/assets/Vector 5.svg" alt="" id="imgdoce">
+</section> -->
+
+<section id="sc2">
+    <span><h2>¿Qué es?</h2></span>
+    <p>Informática Diseño y Desarrollo de Software es la red que conforma industrias creativas del SENA, de la Sede Chía, Cundinamarca; con el fin de preparar a los aprendices en diferente modalidad de aprendizaje, teniendo en cuenta sus gustos, hobbies y afinidad, para que puedan lograr sus metas académicas con la ayuda de instructores debidamente especializados en cada uno de los programas descritos en la red. </p>
+    <img src="src/assets/logoSena.svg" alt="Logo SENA">
+    <PrincipalButton></PrincipalButton>
+</section>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    @font-face {
+	  font-family: 'Inter';
+	  src: url(src/assets/fonts/Inter-VariableFont_opsz,wght.ttf) format('truetype'); 
+	  font-weight: 100 900; 
+	  font-stretch: 50% 200%;
+	}
+
+    .PrincipalText{
+		display: flex;
+		align-items: center;
+        height: 87vh;
+	}
+    
+    span{
+        background-color: #9037FF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        width: 10em;
+        height: 5em;
+        border-radius: 1em;
+        grid-area: t;
+        margin-left: 25%;
+    }
+    
+    #sc2 {
+        width: 100%;
+        height: 100vh;
+        color: white;
+        display: grid;
+        grid-template-areas: "ne t ni"
+                             "a a a"
+                             "na l b";
+        grid-template-columns: 33em 33em 33em;
+        grid-template-rows: 17em 17em 17em;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            grid-area: a;
+            width: 70%;
+            font-size: 24px;
+            margin-left: 15%;
+        }
+
+        img{
+            grid-area: l;
+        }
+        .Principal{
+            grid-area: b;
+            margin-left: 7em;
+        }
+    }
+	h1{
+		-webkit-text-stroke: 3px rgb(255, 255, 255);
+		text-stroke: 3px rgb(255, 255, 255);
+        color:#040005;
+		font-size: 48px;
+        width: 50%;
+        margin-left: 3em;
+        font-weight: medium;
+        font-family: Inter;
+	}
+    h2{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+        background-color: #040005;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .img {
+    position: absolute;
+    transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease; 
+    transform:  translateY(-5px); 
+    }
+
+    .img:hover {
+    transform: scale(1.1) translateY(-10px) 0.2s; 
+    }
+    .sc1 {
+        width: 100%;
+        height: 100vh;
+        margin-top: 1em;
+        position: relative;
+        z-index: 1;
+        display: none;
+    }
+    .img {
+        position: absolute;
+        transition: transform 0.1s ease; 
+    }
+
+
+    .imguno { top: 20px; left: 57%; width: 69px; transform: rotate(302deg); }
+    .imgdos { top: 10px; left: 63%; width: 100px; transform: rotate(335deg); }
+    .imgtres { top: 70px; left: 60%; width: 83px; transform: rotate(244deg); }
+    .imgcuatro { top: 100px; left: 68%; width: 180px; }
+    .imgcinco { top: 60px; left: 79%; width: 180px; }
+    .imgseis { top: 210px; left: 79%; width: 180px; }
+    .imgsiete { top: 340px; left: 70%; width: 199px; transform: rotate(-2deg); }
+    .imgocho { top: 420px; left: 80%; width: 199px; transform: rotate(1deg); }
+    .imgnueve { top: 490px; left: 69%; width: 199px; }
+    .imgdiez { top: 480px; left: 59%; width: 109px; transform: rotate(327deg); }
+    .imgonce { top: 570px; left: 59%; width: 78px; transform: rotate(8deg); }
+    .imgdoce { top: 552px; left: 54%; width: 57px; transform: rotate(251deg); }
+
+    .moveable {
+        transition: left 0.3s ease, top 0.3s ease;
+    }
+</style>
+
+<script>
+    // Función para mover las imágenes cuando haga scroll
+    window.addEventListener('scroll', () => {
+        const sc2 = document.querySelector('.sc2');
+        const scrolled = window.scrollY;
+        const maxScroll = sc2.offsetTop + sc2.offsetHeight - window.innerHeight; // Definir el límite del scroll
+
+        // Establecer las posiciones iniciales y finales de cada imagen
+        const positions = {
+            imguno: { leftStart: 57, topStart: 20, leftEnd: 5, topEnd: 100 },
+            imgdos: { leftStart: 63, topStart: 10, leftEnd: 13, topEnd: 10 },
+            imgtres: { leftStart: 60, topStart: 70, leftEnd: 8, topEnd: 10 },
+            imgcuatro: { leftStart: 68, topStart: 100, leftEnd: -6, topEnd: -10 },
+            imgcinco: { leftStart: 79, topStart: 60, leftEnd: -15, topEnd: 30 },
+            imgseis: { leftStart: 79, topStart: 210, leftEnd: -15, topEnd: -100 },
+            imgsiete: { leftStart: 70, topStart: 340, leftEnd: -8, topEnd: -280 },
+            imgocho: { leftStart: 80, topStart: 420, leftEnd: -15, topEnd: -350 },
+            imgnueve: { leftStart: 69, topStart: 490, leftEnd: -7, topEnd: -440 },
+            imgdiez: { leftStart: 59, topStart: 480, leftEnd: 11, topEnd: -455 },
+            imgonce: { leftStart: 59, topStart: 570, leftEnd: 11, topEnd: -550 },
+            imgdoce: { leftStart: 54, topStart: 552, leftEnd: 18, topEnd: -545 },
+
+
+            
+        };
+
+        // Aplicar el movimiento a cada imagen
+        for (const imgId in positions) {
+            const imgElement = document.getElementById(imgId);
+            const position = positions[imgId];
+            
+            // Calculando el movimiento horizontal (left) y vertical (top) con base al scroll
+            let leftPosition = position.leftStart - (scrolled / maxScroll) * (position.leftStart - position.leftEnd);
+            let topPosition = position.topStart + (scrolled / maxScroll) * (sc2.offsetHeight - position.topStart - position.topEnd);
+
+            // Aplicar las nuevas posiciones
+            imgElement.style.left = `${leftPosition}%`;
+            imgElement.style.top = `${topPosition}px`;
+        }
+    });
+</script>
